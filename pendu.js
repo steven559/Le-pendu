@@ -1,8 +1,8 @@
 var tab=
     [
         "michelle",
-        "telephone",
-        "ordinateur",
+
+
         "tablette",
         "carte",
         "chaise",
@@ -11,10 +11,25 @@ var tab=
 var tabm=[
 
 
+    "telephone",
+    "lunette",
+    "android",
+
+
+];
+
+var tabd=[
+    "ordinateur",
+    "hydrophobe",
+    "Ornithorynque",
+
+
+
+
 ];
 
 
-var tabh=[];
+
 
 var player=[
 
@@ -128,11 +143,13 @@ but.onclick=function(){
 
 
 function dede() {
-
-
+    document.getElementById("diffi").style.visibility='hidden';
+hard.style.display='inline-block';
+medium.style.display='inline-block';
         rand = tab[Math.floor(Math.random() * tab.length)];
         console.log(rand);
         chance = 9;
+        player=[];
     document.getElementById("canvas").width="500";
     document.getElementById("canvas").heigth="600";
 
@@ -159,9 +176,9 @@ b.onclick=function(){
 
 
 function moyen() {
-
-
-    rand = tab[Math.floor(Math.random() * tab.length)];
+    medium.style.display='none';
+   hard.style.display="none";
+    rand = tabm[Math.floor(Math.random() * tabm.length)];
     console.log(rand);
     chance = 9;
      normal="normal";
@@ -175,6 +192,9 @@ function moyen() {
         sp.style.padding="0% 2% 2% 2%";
         essaie=0;
 
+
+
+
     }
 
     document.getElementById("vie").style.visibility="hidden";
@@ -183,14 +203,15 @@ function moyen() {
 medium.onclick=function(){
     document.getElementById("diffi").innerHTML="la difficulté et passer en medium";
     moyen();
+
 };
 
 ;
 
 function dur() {
-
-
-    rand = tab[Math.floor(Math.random() * tab.length)];
+    hard.style.display="none";
+medium.style.display='none';
+    rand = tabd[Math.floor(Math.random() * tabd.length)];
     console.log(rand);
     chance = 9;
 
@@ -203,6 +224,7 @@ function dur() {
         sp.style.border="2px solid red";
         sp.style.padding="0% 2% 2% 2%";
         essaie=0;
+
     }
 
     document.getElementById("vie").style.visibility="hidden";

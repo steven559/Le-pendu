@@ -4,6 +4,9 @@ span{
 text-align: center;
     font-size: 40px;
     padding:0% 2% 2% 2%;
+    position:relative;
+    right:130px;
+
 
 }
 
